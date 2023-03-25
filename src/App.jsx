@@ -6,6 +6,7 @@ import Container from '@mui/material/Container';
 import { lightTheme } from './Theme';
 
 import Header from "./components/Header";
+import Footer from './components/Footer';
 
 import Routes from './routes';
 
@@ -17,6 +18,7 @@ function App() {
       <Container sx={{ paddingTop: 10 }} >
         <Routes />
       </Container>
+      <Footer />
     </ThemeProvider>
   );
 }
