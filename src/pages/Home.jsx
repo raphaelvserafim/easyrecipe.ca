@@ -1,13 +1,20 @@
 import * as React from 'react';
 
+
+
 import SEO from '../SEO';
 
-function Home() {
-    // console.log("Page Home")
-    SEO({ title: 'Home' });
+import SearchInput from '../components/SearchInput';
 
-    
-    return (<>HOME</>);
+function Home() {
+    console.log("Page Home")
+    SEO({ title: 'Home' });
+    return (<>
+
+        <SearchInput />
+    </>
+
+    );
 
 }
 
