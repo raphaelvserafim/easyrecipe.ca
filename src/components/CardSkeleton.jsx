@@ -9,20 +9,23 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Skeleton from '@mui/material/Skeleton';
+import Rating from '@mui/material/Rating';
+import Stack from '@mui/material/Stack';
 
 function CardSkeleton(props) {
-    const { loading = false } = props;
+
+    const { loading = false, data = {} } = props;
 
     return (
-        <Card sx={{ maxWidth: 345, m: 2 }}>
+        <Card sx={{ maxWidth: 345, m: 2 }} >
             <CardHeader
                 avatar={
                     loading ? (
                         <Skeleton animation="wave" variant="circular" width={40} height={40} />
                     ) : (
                         <Avatar
-                            alt="Ted talk"
-                            src="https://pbs.twimg.com/profile_images/877631054525472768/Xp5FAPD5_reasonably_small.jpg"
+                            alt={data.avatar}
+                            src={data.avatar}
                         />
                     )
                 }
@@ -41,16 +44,12 @@ function CardSkeleton(props) {
                             width="80%"
                             style={{ marginBottom: 6 }}
                         />
-                    ) : (
-                        'Ted'
-                    )
+                    ) : (data.author)
                 }
                 subheader={
                     loading ? (
                         <Skeleton animation="wave" height={10} width="40%" />
-                    ) : (
-                        '5 hours ago'
-                    )
+                    ) : (data.dateTime)
                 }
             />
             {loading ? (
@@ -59,8 +58,8 @@ function CardSkeleton(props) {
                 <CardMedia
                     component="img"
                     height="140"
-                    image="https://pi.tedcdn.com/r/talkstar-photos.s3.amazonaws.com/uploads/72bda89f-9bbf-4685-910a-2f151c4f3a8a/NicolaSturgeon_2019T-embed.jpg?w=512"
-                    alt="Nicola Sturgeon on a TED talk stage"
+                    image={data.coverImage}
+                    alt={data.title}
                 />
             )}
 
@@ -68,22 +67,27 @@ function CardSkeleton(props) {
                 {loading ? (
                     <React.Fragment>
                         <Skeleton animation="wave" height={10} style={{ marginBottom: 6 }} />
-                        <Skeleton animation="wave" height={10} width="80%" />
+                        <Skeleton animation="wave" height={10} width="50%" />
                     </React.Fragment>
                 ) : (
-                    <Typography variant="body2" color="text.secondary" component="p">
-                        {
-                            "Why First Minister of Scotland Nicola Sturgeon thinks GDP is the wrong measure of a country's success:"
-                        }
-                    </Typography>
+                    <>
+                        <Typography variant="body2" color="text.secondary" component="p">
+                            {data.title}
+                        </Typography>
+                        <Stack spacing={1}>
+                            <Rating name="half-rating-read" defaultValue={4.5} precision={0.5} readOnly />
+                        </Stack>
+                    </>
                 )}
             </CardContent>
         </Card>
     );
 }
 
+
 CardSkeleton.propTypes = {
     loading: PropTypes.bool,
 };
+
 
 export default CardSkeleton;
