@@ -1,16 +1,20 @@
 import * as React from 'react';
-import { Router  } from '@reach/router';
- 
+import { Router } from '@reach/router';
+
 const NotFound = React.lazy(() => import("./pages/404"));
 const Home = React.lazy(() => import("./pages/Home"));
 
 
+const Category = React.lazy(() => import("./pages/Category"));
+
+
 
 export default function Routes() {
-    
+
     return (
         <Router>
             <Home path="/" />
+             <Category path="/category/:name" />
             <NotFound default />
         </Router>
     );
