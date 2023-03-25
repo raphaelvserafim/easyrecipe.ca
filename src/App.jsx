@@ -1,9 +1,21 @@
+import React from 'react';
+import { ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import Container from '@mui/material/Container';
+
+import { lightTheme } from './Theme';
+
+import Header from "./components/Header";
 
 function App() {
   return (
-    <div className="App">
+    <ThemeProvider theme={lightTheme}>
+      <CssBaseline />
+      <Header />
+      <Container maxWidth="sm" sx={{ paddingTop: "60px" }}>
 
-    </div>
+      </Container>
+    </ThemeProvider>
   );
 }
 
