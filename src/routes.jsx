@@ -9,13 +9,13 @@ const ResultSearch = React.lazy(() => import("./pages/ResultSearch"));
 
 export default function Routes() {
 
-    return (
-        <Router>
-            <Home path="/" />
-            <Category path="/category/:name" />
-            <Read path="/read/:id" />
-            <ResultSearch path="/search/:name" />
-            <NotFound default />
-        </Router>
-    );
+  return (
+    <Router>
+      <Home path="/" />
+      <Category path="/category/:name" />
+      <Read path="/read/:id" />
+      <ResultSearch path="/search/:name" />
+      <NotFound default />
+    </Router>
+  );
 }

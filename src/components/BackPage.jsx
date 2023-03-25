@@ -5,8 +5,8 @@ import Button from '@mui/material/Button';
 
 
 function BackPage() {
-    
-    return (<Button  onClick={useNavigate(-1)}><ArrowBackIosIcon /></Button>);
+
+  return (<Button onClick={useNavigate(-1)}><ArrowBackIosIcon /></Button>);
 
 }
 

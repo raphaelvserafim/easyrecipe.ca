@@ -1,6 +1,6 @@
 
 function SEO(data) {
-    document.title = data.title;
+  document.title = data.title;
 }
 
 export default SEO;

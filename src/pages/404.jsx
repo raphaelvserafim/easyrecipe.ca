@@ -4,9 +4,9 @@ import SEO from '../SEO';
 
 function NotFound() {
 
-    SEO({ title: '404' }); 
-    
-    return (<>404</>);
+  SEO({ title: '404' });
+
+  return (<>404</>);
 
 }
 

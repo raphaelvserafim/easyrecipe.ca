@@ -6,15 +6,15 @@ import SEO from '../SEO';
 
 
 function Read() {
-    const { id } = useParams();
-    console.log(id)
-    SEO({ title: 'Read - Test' });
-    return (
-        <>
-            Hello Word !
-        </>
+  const { id } = useParams();
+  console.log(id)
+  SEO({ title: 'Read - Test' });
+  return (
+    <>
+      Hello Word !
+    </>
 
-    );
+  );
 
 }
 
