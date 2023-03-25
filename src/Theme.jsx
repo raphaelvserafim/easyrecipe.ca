@@ -23,7 +23,7 @@ const styles = {
 const lightTheme = createTheme({
     palette: {
         primary: {
-            main: '#941208',
+            main: '#ff6a28',
             contrastText: '#fff',
         },
         secondary: {
