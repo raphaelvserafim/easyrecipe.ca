@@ -1,9 +1,6 @@
 import * as React from 'react';
 
-
-
 import SEO from '../SEO';
-
 import SearchInput from '../components/SearchInput';
 
 function Home() {

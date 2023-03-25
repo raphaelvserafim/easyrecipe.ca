@@ -14,7 +14,7 @@ function App() {
     <ThemeProvider theme={lightTheme}>
       <CssBaseline />
       <Header />
-      <Container maxWidth="sm" sx={{ paddingTop: "60px" }}>
+      <Container maxWidth="sm" sx={{ paddingTop: "65px" }}>
         <Routes />
       </Container>
     </ThemeProvider>
