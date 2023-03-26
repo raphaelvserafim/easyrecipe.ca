@@ -1,21 +1,17 @@
 import { useState } from 'react';
-import { useNavigate } from '@reach/router';
 import InputBase from '@mui/material/InputBase';
 import Paper from '@mui/material/Paper';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
 import Container from '@mui/material/Container';
-
+import { useNavigate } from "react-router-dom";
 
 function SearchInput(props) {
   const [searchTerm, setSearchTerm] = useState(props.value || "");
-
   const navigate = useNavigate();
 
   const handleSearch = () => {
-    if (searchTerm) {
-      navigate(`/search/${searchTerm}`);
-    }
+    navigate(`/search/${searchTerm}`);
   };
 
   const handleInputChange = (event) => {

@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { useNavigate } from '@reach/router';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import Button from '@mui/material/Button';
+import { useNavigate } from "react-router-dom";
 
 function BackPage() {
   const navigate = useNavigate();
-
+  
   const handleClick = () => {
     navigate(-1);
   };

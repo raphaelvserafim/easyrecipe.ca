@@ -4,12 +4,12 @@ import Box from '@mui/material/Box';
 
 import SEO from '../SEO';
 import SearchInput from '../components/SearchInput';
-
-
 import CardSkeleton from '../components/CardSkeleton';
 
-function Home() {
+const Home = () => {
+
   console.log("Page Home")
+
 
   SEO({ title: 'Home' });
 
@@ -20,11 +20,13 @@ function Home() {
       <SearchInput />
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={0} >
-          {[...Array(6)].map((_, index) => (
-            <Grid key={index} xs={12} sm={6} md={4}>
-              <CardSkeleton loading={true} />
-            </Grid>
-          ))}
+          {
+            [...Array(6)].map((_, index) => (
+              <Grid key={index} xs={12} sm={6} md={4}>
+                <CardSkeleton loading={true} />
+              </Grid>
+            ))
+          }
         </Grid>
       </Box>
     </>

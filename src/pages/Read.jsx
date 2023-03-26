@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useParams } from '@reach/router';
+import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
 
 
 import SEO from '../SEO';

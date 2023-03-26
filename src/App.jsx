@@ -8,7 +8,7 @@ import { lightTheme } from './Theme';
 import Header from "./components/Header";
 import Footer from './components/Footer';
 
-import Routes from './routes';
+import AppRoutes from './routes';
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
       <CssBaseline />
       <Header />
       <Container sx={{ paddingTop: 10, minHeight: '100vh' }} >
-        <Routes />
+        <AppRoutes />
       </Container>
       <Footer />
     </ThemeProvider>
