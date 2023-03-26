@@ -15,7 +15,7 @@ function App() {
     <ThemeProvider theme={lightTheme}>
       <CssBaseline />
       <Header />
-      <Container sx={{ paddingTop: 10 }} >
+      <Container sx={{ paddingTop: 10, minHeight: '100vh' }} >
         <Routes />
       </Container>
       <Footer />

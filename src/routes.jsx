@@ -7,6 +7,9 @@ const Category = React.lazy(() => import("./pages/Category"));
 const Read = React.lazy(() => import("./pages/Read"));
 const ResultSearch = React.lazy(() => import("./pages/ResultSearch"));
 
+const Register = React.lazy(() => import("./pages/Register"));
+
+
 export default function Routes() {
 
   return (
@@ -15,6 +18,7 @@ export default function Routes() {
       <Category path="/category/:name" />
       <Read path="/read/:id" />
       <ResultSearch path="/search/:name" />
+      <Register path="/register" />
       <NotFound default />
     </Router>
   );
