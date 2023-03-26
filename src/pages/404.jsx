@@ -17,7 +17,7 @@ function NotFound() {
         <Paper sx={{ padding: 2 }}>
           <h1 style={{ textAlign: "center" }}>Page not found 😅 </h1>
           <Grid container justifyContent="center" alignItems="center" xs={12} sm={12} md={12}>
-            <img style={{ maxWidth: 200 }} loading="lazy" src={img404} alt="Register" />
+            <img style={{ maxWidth: 400, width:"100%" }} loading="lazy" src={img404} alt="Register" />
           </Grid>
           <p style={{ textAlign: "center" }}>we could not find this page</p>
           <Grid container justifyContent="center" alignItems="center" xs={12} sm={12} md={12}>
